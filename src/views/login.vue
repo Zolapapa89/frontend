@@ -91,7 +91,7 @@ export default {
   
 }
 #formDiv {
-    width: 50%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
