@@ -12,12 +12,12 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{users[0].id}}</td>
-                    <td>{{users[0].text}}</td>
+                    <td>{{tableData[0].id}}</td>
+                    <td>{{tableData[0].text}}</td>
                 </tr>
                 <tr>
-                    <td>{{users[1].id}}</td>
-                    <td>{{users[1].text}}</td>
+                    <td>{{tableData[1].id}}</td>
+                    <td>{{tableData[1].text}}</td>
                 </tr>
             </tbody>
         </table>
@@ -39,7 +39,7 @@ export default {
   
     data(){
         return {
-            users: [],
+            tableData: [],
         }
     },
 
@@ -53,7 +53,7 @@ export default {
              
             axios.get("https://otthoni-feladat-backend.herokuapp.com/data", { headers })
                 .then(function( response ){
-                this.users = response.data;                                        
+                this.tableData = response.data;                                        
                 }.bind(this));
       
         },
